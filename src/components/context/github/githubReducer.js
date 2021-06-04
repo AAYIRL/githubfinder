@@ -1,11 +1,4 @@
-import {
-  SEARCH_USERS,
-  GET_USER,
-  //   SET_ALERT,
-  SET_LOADING,
-  //   REMOVE_ALERT,
-  GET_REPOS,
-} from "../types";
+import { SEARCH_USERS, GET_USER, SET_LOADING, GET_REPOS } from "../types";
 
 const final = (state, action) => {
   switch (action.type) {
