@@ -27,16 +27,16 @@ const App = () => {
     }, 5000);
   };
 
-  const searchUsers = async (user) => {
-    setLoading(true);
+  // const searchUsers = async (user) => {
+  //   setLoading(true);
 
-    const res = await axios.get(
-      `https://api.github.com/search/users?q=${user}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_ID}`
-    );
+  //   const res = await axios.get(
+  //     `https://api.github.com/search/users?q=${user}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_ID}`
+  //   );
 
-    setUsers(res.data.items);
-    setLoading(false);
-  };
+  //   setUsers(res.data.items);
+  //   setLoading(false);
+  // };
 
   const getUser = async (username) => {
     setLoading(true);
@@ -73,8 +73,8 @@ const App = () => {
                 path='/'
                 render={(props) => (
                   <Fragment>
-                    <Search searchUsers={searchUsers} setAlert={showAlert} />
-                    <Users users={users} loading={loading} />
+                    <Search setAlert={showAlert} />
+                    <Users />
                   </Fragment>
                 )}
               />
