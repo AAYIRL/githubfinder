@@ -4,14 +4,7 @@ import axios from "axios";
 import GithubContext from "./githubContext";
 import githubReducer from "./githubReducer";
 
-import {
-  SEARCH_USERS,
-  GET_USER,
-  //   SET_ALERT,
-  SET_LOADING,
-  //   REMOVE_ALERT,
-  GET_REPOS,
-} from "../types";
+import { SEARCH_USERS, GET_USER, SET_LOADING, GET_REPOS } from "../types";
 
 const GithubState = (props) => {
   const initialState = {
